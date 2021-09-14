@@ -1,0 +1,484 @@
+<html style="margin:0px;">
+    <head>
+        <title>DEMO SITE</title>
+        <script src="https://kit.fontawesome.com/74509491b3.js" crossorigin="anonymous"></script>
+        <style>
+            #header{
+                height:70;
+                background-color: white;
+                display: flex;
+                justify-content: space-between;
+                box-shadow: 2px 2px 5px black;
+                position: fixed;
+                left: 0;
+                right: 0;
+                opacity: 0.95;
+            }
+            #nav{
+                 display: flex;
+            }
+            .para{
+                font-weight: 800;
+                font-size: 16px;
+                padding:10px 16px;
+            }
+            .para:hover{
+                cursor: pointer;
+                text-decoration: underline;
+            }
+            button{
+                background-color: rgb(170,210,54);
+                border:none;
+                border-radius: 4px;
+                width:100;
+                height:40;
+                padding:10px 16px;
+                margin-top: 15px;
+                margin-right: 20px;
+                color:white;
+                font-family: 'Popins',sans-serif;
+                font-weight: 500;
+                font-size: 15px;
+            }
+            button:hover{
+                cursor: pointer;
+                opacity: 0.5;
+                
+            }
+            #main{
+                text-align: center;
+                height:700px;
+                background: url('https://edyoda.s3.ap-south-1.amazonaws.com/public/landing-background.png');
+            }
+            #steps-wrapper{
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+            }
+            #div1{
+                background-color: #5acda6;
+                height: 550px;
+                text-align: center;
+                
+            }
+            #div2{
+                background-color:#91ac41 ;
+                height: 550px;
+                text-align: center;
+                
+            }
+            #div3{
+                background-color:#e4b476; 
+                height: 550px;
+                text-align: center;
+            }
+            #div4{
+                background-color:#f69dad; 
+                height: 550px;
+                text-align: center;
+            }    
+            .icon-wrapper{
+                font-size: 80px;
+                padding-top: 80px;
+                text-align: center;
+                color: white;
+                transition: font-size 0.3s;
+            }
+            .icon-wrapper:hover{
+                   font-size: 90px;
+                   cursor: pointer;
+            }
+            .para-heading{
+                color:white;
+                font-size:24px;
+                font-weight: 600;
+                font-family: 'Popins',sans-serif;
+            }
+            #section3{
+                background-color: #f7eee2;
+                text-align: center;
+                height:700px;
+            }
+            #section3>p:first-of-type{
+                color:#91ac41;
+                font-size: 24px;
+                font-family: 'caveat',cursive;
+                margin-top: 35px;
+                margin: 0;
+                padding-top: 16px;
+            }
+            #section3>h1{
+                font-family: 'Popins',sans-serif;
+                font-size: 44px;
+                font-weight: 600;
+            }
+            #section3>p:nth-of-type(2){
+                font-family: 'Popins',sans-serif;
+                font-size: 16px;
+                font-weight: 500;
+                color:#8b8b99;
+                letter-spacing: 0.5px;
+            }
+            .icon{
+                background-color: #e3b375;
+                font-size: 60px;
+                color:white;
+                padding-top: 40px;
+                width: 135px;
+                height:95px;
+                border-radius: 80px;
+                transition: font-size,0.5s;
+            }
+            .icon:hover{
+                font-size: 70px;
+                cursor: pointer;
+            }
+            .sec3iconhead{
+                color:black;
+                font-family: 'Popins',sans-serif;
+                font-size: 24px;
+                padding-top: 24px;
+                font-weight: 600;
+            }
+            #sec3iconwrapper{
+                height:70%;
+                margin-left: 80px;
+                margin-right: 80px;
+                display: flex;
+                justify-content: space-around;
+                padding:16px;
+            }
+            .sec3descrp{
+                font-family: 'Popins',sans-serif;
+                font-size: 16px;
+                letter-spacing: 0.5px;
+                font-weight: 600;
+                color: #8b8b99;
+                line-height: 1.5;
+            }
+            #section4{
+                text-align: center;
+            }
+            #section4>p:first-of-type{
+                color:#91ac41;
+                font-size: 24px;
+                font-family: 'caveat',cursive;
+                margin:0;
+                margin-top: 40px;
+            }
+            #section4>h1{
+                font-family: 'Popins',sans-serif;
+                font-size: 44px;
+                font-weight: 600;
+            }
+            #cards-wrapper{
+                display: flex;
+                justify-content: space-around;
+               
+                margin: 80px auto;
+                width: 87%;
+                
+            }
+            .cards{
+                background-color: #f5f6fb;
+                border-top-left-radius: 45px;
+                border-bottom-left-radius: 45px;
+                border-bottom-right-radius: 45px;
+                padding:30px;
+                margin:0;
+                width:300px;
+                transition: box-shadow 0.3s;
+            }
+            .cards>img{
+                width:80px;
+                border-radius: 50%;
+            }
+            .cards>p:first-of-type{
+                font-family: 'Popins',sans-serif;
+                font-size: 16px;
+                letter-spacing: 0.5px;
+                font-style: italic;
+                color:#8b8b99;
+                line-height: 1.5;
+                font-weight: 500;
+            }
+            .cards>p:nth-of-type(2){
+                font-family: 'Popins',sans-serif;
+                font-size: 16px;
+                font-weight: 600;
+                text-decoration: underline;
+            }
+            .cards>p:nth-of-type(3){
+                font-family: 'Popins',sans-serif;
+                font-size: 12px;
+                color:#8b8b99;
+                font-style: italic;
+                text-decoration: underline;
+            }
+            .cards:hover{
+                box-shadow: 0px 5px 10px rgba(145, 140, 140, 0.925);
+                cursor:context-menu;
+            }
+            #section5{
+                display:flex;
+                height:700px;
+            }
+            #form-wrapper{
+                text-align: center;
+                width:100%;
+                margin-left:0;
+                margin-left: 0;
+            }
+            #button5{
+                background-color: #f69dad;
+                color: white;
+                font-size: 14px;
+                font-weight: 600;
+            }
+            #button5:hover{
+                background-color:transparent;
+                border: 1px solid #f37a90;
+                color:#f14565;
+            }
+            #section6{
+                text-align: center;
+                display: flex;
+                justify-content: space-evenly;
+                background-color: #f6fcfa;
+            }
+            .stats{
+                text-align: center;
+                padding-top: 80px;
+                padding-bottom: 70px;
+                
+            }
+            .stats>h1{
+                font-size: 50px;
+                font-family: 'Popins',sans-serif;
+                font-weight: 600;
+                margin-bottom: 5px;
+            }
+            .stats>p{
+                color:rgb(92, 204, 148);
+                font-weight: 500;
+                font-family: 'Popins',sans-serif;
+                letter-spacing: 0.5px;
+                font-style: italic;
+                margin-top: 0px;
+                padding-top: 0px;
+            }
+            #section7{
+                display: flex;
+                justify-content: space-evenly;
+                
+            }
+            #left-part{
+                width: 500px;
+                margin: 0px 100px;
+            }
+            .input{
+                width:450px;
+                height:60;
+                margin:10px 0px;
+                border-radius: 8px;
+                border:1px solid rgb(207, 205, 205);
+                padding:16px 16px;
+                font-size: 18px;
+                font-weight: 500;
+                font-family: 'Popins',sans-serif;
+                outline: none;
+                color: grey;
+            }
+            #message{
+                height:80;
+            }
+            #last-button{
+                color:white;
+                width:140px;
+                font-size: 16px;
+            }
+            #left-part>p:first-of-type{
+                font-family: 'Popins',cursive;
+                color:#91ac41;
+                font-size: 18px;
+            }
+            #left-part>h1{
+                font-size: 45px;
+                font-family: 'Popins',sans-serif;
+                font-weight: 700;
+            }
+            #left-part>p{
+                color:#8b8b99;
+                font-size: 18px;
+                font-family: 'Popins',sans-serif;
+                font-weight: 500;
+                letter-spacing: 0.5px;
+            }
+            #left-sub>h2{
+                font-size: 25px;
+                font-weight: 600;
+                font-family: 'Popins',sans-serif ;
+            }
+            #left-sub>p{
+                color:#8b8b99;
+                font-size: 18px;
+                font-family: 'Popins',sans-serif;
+                font-weight: 500;
+                letter-spacing: 0.5px;
+            }
+            
+        </style>
+    </head>  
+<body style="margin:0;">
+    <div id="header">
+        <div>
+            <img style="padding: 5px;" src="https://mobirise.com/extensions/organicamp/assets/images/logo1.jpg" alt="image">
+        </div>
+        <div id="nav">
+            <p class="para">Demo Pages</p>
+            <p class="para">Watch Videos</p>
+            <p class="para">Blocks</p>
+            <button>Buy Now</button>
+        </div>
+    </div>
+    <div id="main">
+        <h1 style="padding-top: 200px;font-family: 'Popins',sans-serif;font-size: 44px;font-weight: 600;letter-spacing: 8.8px;line-height:1.2;">Vegan Store Simple Website</h1>
+        <h1 style="font-family: 'Popins',sans-serif;font-size: 44px;font-weight: 600;letter-spacing: 8.8px;line-height:1.2;">Template</h1>
+        <p style="letter-spacing:0.5px;color: #8b8b99;">With nutrition, all the vital functions of the body are connected. It is the source of the development of tissues and cells, their constant renewal, the </p>
+        <p style="letter-spacing:0.5px;color: #8b8b99;">saturation of man with energy.</p>
+    </div>
+    <div id="steps-wrapper">
+        <div id="div1"><div class="icon-wrapper"><i class="fas fa-cut"></i></div>
+        <p class="para-heading">Step 1</p>
+        <p style="font-family: 'Popins',sans-serif;padding:36px;letter-spacing:0.5px;line-height:1.6;color:white;font-size: 18px;">Vegetables are an integral part of the human diet. They are extremely useful because of the high content of carbohydrates, various acids, vitamins and active elements in the form, easy for digestion.</p>
+    </div>
+        <div id="div2"><div class="icon-wrapper"><i class="fas fa-paint-brush" id="icon"></i></div>
+        <p class="para-heading">Step 2</p>
+        <p style="font-family: 'Popins',sans-serif;padding:36px;letter-spacing:0.5px;line-height:1.6;color:white;font-size: 18px;">Fresh tomatoes are ideal for replenishing the loss of minerals. These vegetables contain a lot of acids that our body needs for full-fledged work.</p>
+    </div>
+        <div id="div3"><div class="icon-wrapper"><i class="fas fa-shopping-bag"></i></div>
+        <p class="para-heading">Step 3</p>
+        <p style="font-family: 'Popins',sans-serif;padding:36px;letter-spacing:0.5px;line-height:1.6;color:white;font-size: 18px;">In the content of vitamin C, sweet peppers are superior to lemons and even black currants! The greatest amount of vitamin is contained around the stalk, that is, in the part of the product that is usually cut during cleaning.</p>
+    </div>
+        <div id="div4"><div class="icon-wrapper"><i class="fas fa-smile-wink"></i></div>
+        <p class="para-heading">Step 4</p>
+        <p style="font-family: 'Popins',sans-serif;padding:36px;letter-spacing:0.5px;line-height:1.6;color:white;font-size: 18px;">If you sometimes eat hot chili peppers, this will help normalize cerebral circulation, ease the condition with bronchial asthma, cough, sore throat, flu.</p>
+    </div>
+    </div>
+    <div id="section3">
+        <p>Fresh Food</p>
+        <h1>Our Vegan Store!</h1>
+        <p>Radish contains a lot of fiber, pectin and mineral salts.</p>
+        <div id="sec3iconwrapper">
+            <div class="icon">
+                <i class="fa fa-camera"></i>
+                <p class="sec3iconhead">Fresh Vegetables</p>
+                <p class="sec3descrp">Use for cooking several types of vegetable oil.</p>
+            </div>
+            <div class="icon">
+                <i class="fa-rocket fa"></i>
+                <p class="sec3iconhead">High Quality</p>
+                <p class="sec3descrp">This is the best source of essential fatty acids for the body</p>
+            </div>
+            <div class="icon">
+                <i class="fab fa-twitter"></i>
+                <p class="sec3iconhead">Sale</p>
+                <p class="sec3descrp">It is very good, if in the kitchen there will always be several bottles with different oils.</p>
+            </div>
+            <div class="icon">
+                <i class="fab fa-weixin"></i>
+                <p class="sec3iconhead">Best Price</p>
+                <p class="sec3descrp">Remember that unrefined oils are not suitable for heat treatment.</p>
+            </div>
+        </div>
+    </div>
+    <div id="section4">
+        <p>Fresh Food</p>
+        <h1>Our Vegan Shop!</h1>
+        <div style="width:650px;text-align: center;margin:auto">
+            <p style="font-family: 'Popins',sans-serif;font-size: 16px;font-weight: 600;color:#8b8b99;letter-spacing: 2.5px;">According to experts, any habit can be formed in 21 days. The same statement applies to healthy eating.</p>
+        </div>
+        <div id="cards-wrapper">
+            <div class="cards">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="image">
+                <p>Sales consultants are very polite. Many of the products have tried and are ready to prompt and recommend to customers. The staff shows that they completely share the philosophy of proper nutrition, if you can say so.</p>
+                <p>Nishkarsh Raja</p>
+                <p>Cook</p>
+            </div>
+            <div class="cards">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="image">
+                <p>The assortment is very wide. From useful organic oils, cereals and teas to specific products for vegetarians, such as sausages and pies without meat.</p>
+                <p>Samarth Saxena</p>
+                <p>Manager</p>
+            </div>
+            <div class="cards">
+                <img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png" alt="image">
+                <p>I want to say a huge thank you to the management of the store and all its employees, I'm not a vegetarian, it would seem that the store is not for me, but it's not so, any person who comes here will find something useful.</p>
+                <p>Panjak Verma</p>
+                <p>Seller</p>
+            </div>
+        </div>
+    </div>
+    <div id="section5">
+        <div style="width: 600px;margin:0;height:100%;width:900px;">
+            <img src="https://mobirise.com/extensions/organicamp/assets/images/19.jpg" alt = "image"style="width:750px;height:700px">
+        </div>
+        <div id="form-wrapper">
+            <form method="POST" style="background: url('https://edyoda.s3.ap-south-1.amazonaws.com/public/strawberry-white.png');height:100%">
+                <div style="width:200;margin:auto;">
+                    <h1 style="font-family: 'Popins',sans-serif;font-weight: 600;font-size: 40px;margin-top: 0px;;padding-top: 150px;">Follow Us</h1>
+                    <p style="padding-top:0px;margin-top: 5px;font-family: 'Popins',sans-serif;font-size: 16px;color:#8b8b99;letter-spacing: 0.5px;line-height: 1.5;font-weight: 500;word-spacing: 1px;">A wide range of products; many unusual and tasty products; courteous staff.</p>
+                    <div style="padding-top: 30px;"><input type="email" name="E-mail" placeholder="Enter Your E-mail"style="height:50;border:none;border-radius:4px;padding:5px;font-family:'Popins',sans-serif;font-weight: 600;letter-spacing:0.5px;outline:none " /></div>
+                    <button id="button5">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="section6">
+        <div class="stats">
+            <h1>7</h1>
+            <p>Year of experiences</p>
+        </div>
+        <div class="stats">
+            <h1>123k</h1>
+            <p>Happy Customers</p>
+        </div>
+        <div class="stats">
+            <h1>72k</h1>
+            <p>100% Satisfaction</p>
+        </div>
+        <div class="stats">
+            <h1>13k</h1>
+            <p>Detox Smoothies</p>
+        </div>
+    </div>
+    <div id="section7">
+        <div id="left-part">
+            <p>Contact Us</p>
+            <h1>Address Information</h1>
+            <p>Overeating is one of the most common causes of overweight and digestive problems.</p>
+            <div id="left-sub">
+                <h2>Pilibhit Store</h2>
+                <p>Moh. Kesri Singh,</p>
+                <p>Near Bengali Sweets,</p>
+                <p>Pilibhit.</p>
+                <p>Opens Monday to Friday:9Am-10Pm</p>
+            </div>
+        </div>
+        <div id="left-part">
+            <p>Meet Our Team</p>
+            <h1>Get In Touch</h1>
+            <p>The task of proper nutrition - to remove from the diet harmful food and enrich it useful.</p>
+            <div>
+                <form method="POST">
+                    <input class="input" type="text" name="Name" placeholder="Name">
+                    <input class="input" type="" name="Contact" placeholder="Phone">
+                    <input class="input" type="text" name="Subject" placeholder="Subject">
+                    <input class="input" type="email" name="E-mail" placeholder="E-mail">
+                    <input class="input" id="message" type="text" name="Message" placeholder="Message">
+                    <button id="last-button">Submit Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
